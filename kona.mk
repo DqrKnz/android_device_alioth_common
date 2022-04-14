@@ -89,6 +89,12 @@ PRODUCT_DEX_PREOPT_DEFAULT_COMPILER_FILTER := everything
 # Don't preopt prebuilts
 DONT_DEXPREOPT_PREBUILTS := true
 
+
+#Enable DS2, Hardbypass feature for Dolby
+PRODUCT_PROPERTY_OVERRIDES += \
+    vendor.audio.dolby.ds2.hardbypass=false\
+    ro.vendor.dolby.dax.version=DAX3_3.5.6.11_r1
+
 # ANT+
 PRODUCT_PACKAGES += \
     AntHalService-Soong \
